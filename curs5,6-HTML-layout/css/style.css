@@ -1,0 +1,206 @@
+body {
+  margin:0;
+  position:relative;
+}
+
+.margin-auto {
+  margin:0 auto;
+  width:960px;
+}
+
+.margin-0 {
+  margin:0;
+}
+
+.blue-box {
+  background-color:#27659f;
+  color:white;
+}
+
+.pull-left {
+  float:left;
+}
+
+.pull-right {
+  float:right;
+}
+
+.clearfix::after {
+  content:'';
+  display:block;
+  clear:both;
+}
+
+.brand {
+  padding:30px 0 20px;
+}
+
+.contact-info {
+  font-size:12px;
+}
+
+.slider {
+  position:relative;
+  height:380px;
+  background-image:url("https://i.imgur.com/TaMOlMF.jpg");
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+}
+
+.slider-btn {
+  position:absolute;
+  right: 29px;
+  bottom: -18px;
+  height: 87px;
+  width: 651px;
+  font-weight:bold;
+}
+
+.top-section {
+    padding: 30px 0 15px;
+    height: 400px;
+    border-bottom: dashed 1px black;
+}
+
+.articles {
+    background-color: #ccc;
+    width: 260px;
+    height: 350px;
+    margin-right: 30px;
+    padding:20px;
+    position: relative;
+}
+
+.top-img {
+  width: 240px;
+  height: 90px;
+}
+
+.read-more {
+    position: absolute;
+    bottom: 13px;
+    right: 40px;
+}
+
+.middle-section {
+  padding:15px 0;
+}
+
+.middle-img {
+  width:200px;
+  height:160px;
+}
+
+.middle-article {
+  padding-left:230px;
+  position:relative;
+  height:168px;
+}
+
+.aside-link {
+  color: #27659f;
+  text-decoration: none;
+  font-size:13px;
+}
+
+.bottom-img {
+  width: 174px;
+  height: 100px;
+  margin-right:12.5px;
+}
+
+a.blue-box {
+  padding:15px 55px;
+  margin-right:10px;
+  text-decoration:none;
+  text-align:center;
+}
+
+nav div a:last-child {
+  margin-right:0;
+}
+
+h2 span {
+    font-weight: normal;
+    font-size: 15px;
+    border-left: solid 1px black;
+    padding: 10px;
+}
+
+div.slider div:first-child {
+  margin:29px 0 0 29px;
+  text-align:center;
+  width: 333px;
+  height: 181px;
+  position:absolute;
+}
+
+main {
+  height: 780px;
+}
+
+article.pull-right{
+  margin-right:0;
+}
+
+h3 {
+    border-bottom: 1px dotted gray;
+    margin-top:0;
+}
+
+img {
+  padding:3px;
+  border:1px solid black;
+}
+
+article.articles a {
+    font-weight:bold;
+}
+
+section.middle-section article:first-child {
+  width:632px;
+  padding-bottom:10px;
+  border-bottom: 1px dotted gray;
+}
+
+aside {
+    background-color: #f0f0f0;
+    width: 301px;
+    padding: 8px 8px 0;
+    height: 169px;   
+}
+
+aside h3 {
+  color: gray;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    border-bottom: 1px solid gray;
+    margin-bottom: 5px;
+}
+
+section.bottom-section img:first-child {
+  margin-right:0;
+}
+
+footer {
+  width:100%;
+  position:absolute;
+}
+
+footer div p:first-child {
+  padding-left:10px;
+}
+
+footer div p:last-child {
+  padding-right:10px;
+}
+
+
+
+

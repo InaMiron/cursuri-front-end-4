@@ -1,0 +1,86 @@
+.redBorder {
+  border: 1px solid red;
+}
+
+.clearfix::after {
+  content:'';
+  display:block;
+  clear:both;
+}
+
+.hidden {
+  height: 20px;
+  background-color: #d1f2b7;
+  margin: 100px auto 0;
+  visibility: hidden;
+}
+
+div.hidden img:first-child {
+  height:20px;
+  float:left;
+}
+
+div.hidden img:last-child {
+  height:20px;
+  float:right;
+}
+
+div.hidden > p {
+  float: left;
+  margin-left: 10px;
+  color: #80bf65;
+  font-weight: bold;
+}
+
+div {
+  border: 1px solid black;
+  margin: 10px auto 100px;
+  padding: 10px;
+  width: 800px;
+  height: 400px;
+  position:relative;
+}
+
+#formImage {
+  float:right;
+  width: 50%;
+  height: 100%;
+}
+
+form { 
+  width: 300px;
+  height: 80%;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.fullScreen {
+  width: 296px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin:0;
+}
+
+ul {
+  list-style-type:none;
+}
+
+textarea {
+  padding: 1px;
+  height: 95px;
+}
+
+#btn-submit {
+  position: absolute;
+  left: 240px;
+  bottom: 1px;
+  background-color: #319fbb;
+  border: 1px solid #3c7db1;
+  border-radius: 4px;
+  width: 60px;
+  height: 30px;
+  color: white;
+}

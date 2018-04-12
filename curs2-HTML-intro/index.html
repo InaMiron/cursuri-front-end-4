@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Intro</title>
+  </head>
+  <body>
+    <h1> Intro HTML </h1>
+    <p> Play with <strong> HTML </strong> </p>
+    
+<!--     MENU -->
+    <ul type="none">
+      <li><a href="index.html"> Intro HTML </a></li>
+      <li><a href="intro-css.html"> Intro CSS </a></li>
+      <li><a href="intro-js.html"> Intro JS </a></li> 
+    </ul>
+    
+    <img src="https://cdn0.iconfinder.com/data/icons/HTML5/512/HTML_Logo.png">
+    
+    <table border=1>
+      <tr>
+        <th>Name</th>
+        <th colspan=2 >Details</th>
+        <!-- <th>Age</th> -->
+      </tr>
+      <tr>
+        <td>Anca</td>
+        <td>anca@gmail.com</td>
+        <td>20</td>
+      </tr>
+      <tr>
+        <td>Dana</td>
+        <td>dn@gmail.com</td>
+        <td>15</td>
+      </tr>
+      <tr>
+        <td>Mela</td>
+        <td>ml@yahoo.com</td>
+        <td>18</td>
+      </tr>
+    </table>
+    
+    <table border=1>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td colspan=2>4</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td rowspan=2>7</td>
+        <td>8</td>
+      </tr><tr>
+        <td>9</td>
+        <td>10</td>
+      </tr>
+    </table>
+    
+    <!-- FORMS -->
+    <br>
+    <form method="GET" action="test.html">
+      <input type="text" placeholder="Search by name" name="search">
+
+      <input type="submit" value="Search">
+    </form>
+    
+    <br>
+    
+    <form method="POST">
+      <input type="email" placeholder="Email" name="email">
+      <input type="password" placeholder="Password" name="password">
+      
+      <input type="radio" name="gen" value="F">F
+      <input type="radio" name="gen" value="M">M
+      
+      <input type="checkbox" name="accept" checked> I accept ...
+      
+      <select name="courses">
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JS">JavaScript</option>
+      </select>
+      
+      <input type="submit" value="Save">
+    </form>
+    
+    <br>
+    
+    <form method="POST" action="#">
+      <input type="file" name="file" accept="audio/*,video/*,image/*,media_type">
+      <input type="submit">
+    </form> 
+    
+    
+    
+    
+  </body>
+</html>

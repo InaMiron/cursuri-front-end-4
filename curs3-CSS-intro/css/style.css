@@ -1,0 +1,57 @@
+p {
+  color: brown;
+}
+
+#navbar {
+  background-color: yellow;
+}
+
+.box {
+/*   border-color:  */
+  border: solid 1px pink;
+}
+
+* {
+  color: pink;
+}
+
+div p a span {
+  font-style: italic;
+  font-weight: bold;
+}
+
+[id] {
+  border:5px solid brown;
+}
+
+[id="first"] {
+  color:yellow;
+}
+
+[type="text"] {
+  border:2px solid green;
+}
+
+
+
+a:active {
+  color:blue;
+}
+
+a:link {
+  color:purple;
+}
+
+a:visited {
+  color: darkgray;
+}
+
+a:hover {
+  color:green;
+  font-weight:bold;
+}
+
+a::after {
+  content: '8 martie';
+  display: block;
+}
