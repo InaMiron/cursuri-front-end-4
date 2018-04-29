@@ -2,12 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <style>
+    table,tr,th,td {
+      border:1px solid black;
+      border-collapse: collapse;  
+    }
+  </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
   <title>AJAX</title>
 </head>
 <body>
-  <h1>CoinMarketCap</h1>
-  <div id="list-items"></div>
+  <h1>Cryptocurrency Market Capitalizations</h1>
+  <div>
+    <table>
+      <thead>
+        <th>Name</th>
+        <th>Item Rank</th>
+        <th>Price USD</th>
+        <th>Price BTC</th>
+        <th>Market Cap USD</th>
+        <th>Available Supply</th>
+        <th>Percent Change 24h</th>
+      </thead>
+      <tbody id="infoBody">
+             
+      </tbody>
+    </table>
+  </div>
 </body>
 </html>
