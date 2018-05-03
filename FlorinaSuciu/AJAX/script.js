@@ -5,11 +5,11 @@ function onHtmlLoaded() {
 }
 
 function getPosts () {$.ajax('https://api.coinmarketcap.com/v1/ticker/', { 
-  method: 'GET',
+   method: 'GET',
    success: function(response) {
      console.log("Get post =", response);
      var list = document.getElementById("infoBody");
-//      var displayInfo = document.getElementById("list-items");
+
      for (var i = 0; i<response.length; i++) {
       var item = response[i];
        
@@ -20,7 +20,7 @@ function getPosts () {$.ajax('https://api.coinmarketcap.com/v1/ticker/', {
         "<td>" + item.price_btc + "</td>" +
         "<td>" + item.market_cap_usd + "</td>" +
         "<td>" + item.available_supply + "</td>" +
-        "<td>" + item.percent_change_24h + "</td>";
+        "<td>" + item.percent_change_24h +"%</td>";
        
       list.appendChild(dynamicRowInfo);
      }
