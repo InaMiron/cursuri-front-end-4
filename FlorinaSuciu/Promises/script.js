@@ -58,9 +58,14 @@ function callOnArraySuccess (arrayResponse) {
   var arrayResponseObject = arrayResponse.data;
   var coinName = arrayResponseObject.name;
   var priceUsd = arrayResponseObject.quotes.USD.price;
-  var priceEur = arrayResponseObject.quotes.EUR.price
+  var priceEur = arrayResponseObject.quotes.EUR.price;
   console.log("RESPONSE =", arrayResponseObject);
   console.log("Name =", coinName);
   console.log("Price =", priceUsd + "USD", ";", priceEur + "EUR");
-  var container = document.getElementById("container");
+  var dynamicRowInfo = document.createElement("tr"); 
+  dynamicRowInfo.innerHTML = "<td>" + coinName + "</td>" +
+    "<td>" + priceUsd + "</td>" +
+    "<td>" + priceEur + "</td>";
+  var list = document.getElementById("infoBody");
+  list.appendChild(dynamicRowInfo); 
 }

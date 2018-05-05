@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <style>
+    table,tr,th,td {
+      border:1px solid black;
+      border-collapse: collapse;  
+    }
+  </style>
   <meta charset="UTF-8">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
@@ -8,8 +14,17 @@
 </head>
 <body>
   <h1>Cryptocurrency Market Capitalizations</h1>
-  <div id="container">
-    
-  </div>
+  <section>
+    <table>
+      <thead>
+        <th>Name</th>
+        <th>Price USD</th>
+        <th>Price EUR</th>
+      </thead>
+      <tbody id="infoBody">
+             
+      </tbody>
+    </table>
+  </section>
 </body>
 </html>
