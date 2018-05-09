@@ -6,10 +6,11 @@ function onHtmlLoaded() {
 
 function getPosts () {
   $.ajax("https://api.coinmarketcap.com/v2/ticker/")
-  .then(callOnSuccess, callOnError)
+  .then(callOnSuccess)
   .then(valuesToArray)
   .then(sortArray)
-  .then(display);
+  .then(display)
+  .catch(callOnError);
 }
 
 // Success
@@ -21,6 +22,9 @@ function callOnSuccess (response) {
   
 // Error 
 function callOnError(xhr) {
+  var container = document.getElementById("error-container");
+  var table = document.querySelector("table");
+  table.style.display = "none";
   container.innerHTML = "Error!";
 }
 
@@ -49,7 +53,8 @@ function display(sortedArray) {
       var item = sortedArray[i];
       console.log("Item =", item);
       $.ajax("https://api.coinmarketcap.com/v2/ticker/" + item.id + "/?convert=EUR")
-      .then(callOnArraySuccess);
+     .then(callOnArraySuccess)
+     .catch(callOnError);
     }
   }
 
