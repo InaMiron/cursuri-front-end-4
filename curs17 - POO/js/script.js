@@ -126,9 +126,6 @@ for (var i = 0; i < userData.length; i++) {
 }
 
 
-
-
-
 // function User() {
 //     this.name = "";
 //     this.age = 0;
