@@ -16,7 +16,26 @@ currentPost.fetchData(currentPostId).then(function() {
 }).catch(function() {
   console.log("Something went wrong on Post Details View");
 });
-
+  
+  var commentsList = new Comments();
+  //console.log(commentsList);
+  commentsList.fetchData(currentPostId).then(function() {
+    for(var i = 0; i < commentsList.comments.length; i++) {
+      //console.log(commentsList.comments[i]);
+       var commentDetailsContainer = document.getElementById("comment-details");
+       var commentName = document.createElement("h4");
+       commentName.innerHTML = commentsList.comments[i].name;
+       var commentEmail = document.createElement("h4");
+       commentEmail.innerHTML = commentsList.comments[i].email;
+       var commentBody = document.createElement("p");
+       commentBody.innerHTML = commentsList.comments[i].body;
+       commentDetailsContainer.appendChild(commentName);
+       commentDetailsContainer.appendChild(commentEmail);
+       commentDetailsContainer.appendChild(commentBody); 
+    }
+  })
+  
+  
 /**
      * It retrieves a query (URL) parameter value
      * 
@@ -28,4 +47,5 @@ currentPost.fetchData(currentPostId).then(function() {
         var results = regex.exec(location.search);
         return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
     }
+
 }

@@ -25,5 +25,7 @@ PostList.prototype.fetchData = function () {
     }
   });
 }
+
+
  
          
