@@ -18,6 +18,7 @@ PostList.prototype.fetchData = function () {
         postModel.userId = postItem.userId;
         //push the model in items array
         that.items.push(postModel);
+        //console.log(postModel);
       }
     },
     error: function(xhr) {

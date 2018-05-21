@@ -33,9 +33,9 @@ function Comments() {
   this.comments = [];
 }
 
-Comments.prototype.fetchData = function (postId) {
+Comments.prototype.fetchData = function (id) {
   var that = this;
-  return $.ajax('https://jsonplaceholder.typicode.com/posts/' + postId +'/comments', {
+  return $.ajax('https://jsonplaceholder.typicode.com/posts/' + id +'/comments', {
     method: 'GET',
     success: function(commentsData) {
       for(var i = 0; i < commentsData.length; i++) {

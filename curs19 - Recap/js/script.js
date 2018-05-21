@@ -2,11 +2,8 @@ function sum(a,b) { //a=5,si b=6 dupa ce setam atributele prin metoda bind;
   console.log(this); //initial e window, dupa ce se foloseste bind si se salveaza intr-o copie care se apeleaza this va deveni obicetul cu atr1:true;
   return a + b;
 }
-var sumCopy = sum.bind({atr1: true}, 5, 6);
+var sumCopy = sum.bind({atr1: true},5,6);
 sumCopy();
-var r = sumCopy();
-console.log(r);//pt a folosi suma a+b
-
 //manipularea this-ului cu functiile call si apply (a se vedea pe MDN care e diferenta dintre cele doua)
 
 /**
@@ -114,3 +111,5 @@ var user = {
 };
 var getFullNameCopy = getFullName.bind(user); // by doing this we're creating a copy of getFullName function which will always be invoked with 'user' object as context (as this)
 var fullName2 = getFullNameCopy(); // fullName2 variable will have the value set to 'John Doe' since the copy fn was called with 'this' set to 'user' object
+console.log(fullName);
+console.log(fullName2);
