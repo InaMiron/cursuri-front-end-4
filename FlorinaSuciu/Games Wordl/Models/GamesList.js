@@ -11,7 +11,7 @@ GamesList.prototype.fetchData = function() {
     success: function(response) {
       for(var i = 0; i < response.length; i++) {
         var gameItem = response[i];
-        console.log(gameItem);
+        //console.log(gameItem);
         var gameModel = new Game();
         gameModel._id = gameItem._id;
         gameModel.title = gameItem.title;
@@ -23,5 +23,18 @@ GamesList.prototype.fetchData = function() {
     error: function() {
       console.log("Something went wrong when fetching games");
     }
+  })
+}
+
+GamesList.prototype.deleteData = function(gameId) {
+  var that = this;
+  return $.ajax(url + "/games/" + gameId, {
+    method: "DELETE",
+    success: function(response) {
+      console.log("Delete game = ", response);
+    },
+    error: function() {
+      console.log("Unable to delete game");
+    },
   })
 }

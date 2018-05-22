@@ -37,3 +37,5 @@ GameDetails.prototype.fetchData = function(gameId) {
   })
 }
 
+
+

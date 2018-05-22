@@ -7,6 +7,7 @@ window.onload = function() {
       //create and display item container
       var itemContainer = document.createElement("div");
       container.appendChild(itemContainer);
+      itemContainer.style.border = "1px solid black";
       //create and display game title
       var itemTitle = document.createElement("a");
       itemTitle.innerHTML = item.title;
@@ -21,6 +22,20 @@ window.onload = function() {
       var itemDescription = document.createElement("p");
       itemDescription.innerHTML = item.description;
       itemContainer.appendChild(itemDescription);
+      //create delete button
+      var buttonDelete = document.createElement("button");
+      buttonDelete.innerHTML = "Delete";
+      itemContainer.appendChild(buttonDelete);
+      //delete game
+      buttonDelete.setAttribute("id", item._id);
+      buttonDelete.addEventListener("click", function(event) {
+        console.log(event.target);
+        var id = event.target.getAttribute("id");
+        console.log(id);
+        games.deleteData(id);
+        var containerDeleted = event.target.parentElement;
+        container.removeChild(containerDeleted);
+      })
     }
   }).catch(function() {
     console.log("Something went wrong on GamesListviews");
