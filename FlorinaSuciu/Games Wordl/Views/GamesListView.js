@@ -1,5 +1,6 @@
 window.onload = function() {
   var games = new GamesList();
+  
   games.fetchData().then(function() {
     var container = document.getElementById("container");
     for(var i = 0; i < games.items.length; i++) {
@@ -22,6 +23,10 @@ window.onload = function() {
       var itemDescription = document.createElement("p");
       itemDescription.innerHTML = item.description;
       itemContainer.appendChild(itemDescription);
+      //create edit button
+      var editButton = document.createElement("button");
+      editButton.innerHTML = "Edit";
+      itemContainer.appendChild(editButton);
       //create delete button
       var buttonDelete = document.createElement("button");
       buttonDelete.innerHTML = "Delete";
@@ -35,9 +40,30 @@ window.onload = function() {
         games.deleteData(id);
         var containerDeleted = event.target.parentElement;
         container.removeChild(containerDeleted);
-      })
+      });
     }
   }).catch(function() {
     console.log("Something went wrong on GamesListviews");
+  })
+  
+  //create new game
+  var createButton = document.querySelector("[type='submit']");
+  createButton.addEventListener("click", function() {
+    var title = document.querySelector("[name='title']").value;
+    var releaseDate = document.querySelector("[name='releaseDate']").value;
+    var genre = document.querySelector("[name='genre']").value;
+    var publisher = document.querySelector("[name='publisher']").value;
+    var imageUrl = document.querySelector("[name='imageUrl']").value;
+    var description = document.querySelector("[name='description']").value;
+    var data = {
+      title : title,
+      releaseDate : releaseDate,
+      genre : genre,
+      publisher : publisher,
+      imageUrl : imageUrl,
+      description : description,
+    };
+    var newGame = new GameDetails();
+    newGame.createData(data);
   })
 }

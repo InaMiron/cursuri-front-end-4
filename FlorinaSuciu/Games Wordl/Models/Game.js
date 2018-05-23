@@ -37,5 +37,17 @@ GameDetails.prototype.fetchData = function(gameId) {
   })
 }
 
-
+GameDetails.prototype.createData = function(data) {
+  var that = this;
+  return $.ajax(url + "/games", {
+    method: "POST",
+    data:data,
+    success: function(response) {
+      console.log("Create game= ", response);
+    },
+    error: function() {
+      console.log("Something went wrong creating game");
+    }
+  })
+}
 

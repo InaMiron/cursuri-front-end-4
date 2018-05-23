@@ -38,3 +38,5 @@ GamesList.prototype.deleteData = function(gameId) {
     },
   })
 }
+
+
