@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="../Models/Game.js"></script>
+  <script src="../Models/GamesList.js"></script>
+  <script src="../Views/GamesListView.js"></script>
+</head>
+<body>
+  <h1>Games World</h1>
+  <form>
+    <p>Game Details</p>
+    Title<input type=text name="title"><br>
+    Release Date<input type=text name="releaseDate"><br>
+    Genre<input type=text name="genre"><br>
+    Publisher<input type=text name="publisher"><br>
+    Image Url<input type=text name="imageUrl"><br>
+    Description<textarea name="description" placeholder="Game description here..."></textarea><br>
+    <input type="submit" name="update" value="Update Game">
+    <input type="submit" name="create" value="Create New Game">
+  </form>
+  <div id="container">
+    
+  </div>
+</body>
+</html>
