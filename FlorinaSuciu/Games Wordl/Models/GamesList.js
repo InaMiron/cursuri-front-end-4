@@ -20,7 +20,7 @@ GamesList.prototype.fetchData = function() {
         that.items.push(gameModel);
       }
     },
-    error: function() {
+    error: function(xhr) {
       console.log("Something went wrong when fetching games");
     }
   })
@@ -33,7 +33,7 @@ GamesList.prototype.deleteData = function(gameId) {
     success: function(response) {
       console.log("Delete game = ", response);
     },
-    error: function() {
+    error: function(xhr) {
       console.log("Unable to delete game");
     },
   })

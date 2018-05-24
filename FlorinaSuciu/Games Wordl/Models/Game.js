@@ -31,7 +31,7 @@ GameDetails.prototype.fetchData = function(gameId) {
       gameModel.imageUrl = response.imageUrl;
       gameModel.description = response.description;
    },
-    error: function() {
+    error: function(xhr) {
       console.log("Something went wrong with fetching game details.");
     },
   })
@@ -45,9 +45,23 @@ GameDetails.prototype.createData = function(data) {
     success: function(response) {
       console.log("Create game= ", response);
     },
-    error: function() {
+    error: function(xhr) {
       console.log("Something went wrong creating game");
     }
   })
 }
+
+GameDetails.prototype.updateData = function(id, data) {
+  var that = this;
+  return $.ajax(url + "/games/" + id, {
+    method: "PUT",
+    data: data,
+    success: function(response) {
+      console.log("Update game= ", response);
+    },
+    error: function(xhr) {
+      console.log("Something went wrong updating game");
+    }
+  })
+}                
 
