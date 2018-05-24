@@ -94,3 +94,4 @@ function expire() {
 const expire2 = expire.bind({});
 
 console.log(expire2());
+
