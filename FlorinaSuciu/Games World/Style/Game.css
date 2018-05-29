@@ -1,0 +1,33 @@
+body {
+      position:relative;
+      margin: 0 auto;
+      background-image:url("https://www.gamewallpapers.com/wallpapers_slechte_compressie/wallpaper_god_of_war_2017_06_1920x1080.jpg");
+      color:white;
+    }
+
+#gameDetails {
+      display:none;
+      padding-bottom:10px;
+      background:transparent;
+      color:white;
+    }
+
+input {
+      border:none;
+      width:100%;
+      background:transparent;
+      color:white;
+    }
+    
+    textarea {
+      width: 100%;
+      height: 170px;
+      border:none;
+      margin-bottom: 5px;
+      background:transparent;
+      color:white;
+    }
+    
+    input[type="submit"] {
+      width:150px;
+    }

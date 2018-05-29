@@ -32,6 +32,7 @@ GamesList.prototype.deleteData = function(gameId) {
     method: "DELETE",
     success: function(response) {
       console.log("Delete game = ", response);
+      location.reload(true);
     },
     error: function(xhr) {
       alert("Unable to delete game");

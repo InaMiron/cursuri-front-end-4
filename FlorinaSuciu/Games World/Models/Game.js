@@ -57,10 +57,11 @@ GameDetails.prototype.updateData = function(gameId, data) {
     method: "PUT",
     data: data,
     success: function(response) {
-      console.log("Update game= ", response);
+      alert("Game was successfully updated!");
+      location.reload(true);
     },
     error: function(xhr) {
-//       alert("Something went wrong updating game");
+//      alert("Something went wrong updating game");
     }
   })
 }                
