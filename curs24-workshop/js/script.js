@@ -67,6 +67,8 @@ window.onload = function() {
       localStorage.setItem("itemsArray", JSON.stringify(items)); 
       if (elementForUpdate.quantity === 0) {
         container.removeChild(parent);
+        items.splice(index, 1);
+        localStorage.setItem("itemsArray", JSON.stringify(items));
       }
   })
  }
