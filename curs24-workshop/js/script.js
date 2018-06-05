@@ -1,5 +1,4 @@
-
-const items = [{  id: 1,
+let items = [{  id: 1,
     name: "Telefon mobil HTC U 11, Dual SIM, 64GB, 4G, Brilliant Black",
     imageUrl: "https://s12emagst.akamaized.net/products/6053/6052836/images/res_151cbf9f491dc8b1555e14bfe5a60fbc_150x150_bpqg.jpg",
     quantity: 5,
@@ -25,22 +24,21 @@ const items = [{  id: 1,
       quantity: 7,
       price: 1685
 }]
-
-//save in local storage
-localStorage.setItem("itemsArray", JSON.stringify(items));
-
-//get the array from local storage
-const itemsStr = localStorage.getItem("itemsArray");
-const itemsArr = JSON.parse(itemsStr);
-
 window.onload = function() {
+    //save in local storage
+  localStorage.setItem("itemsArray", JSON.stringify(items));
+
+  //get the array from local storage
+  let itemsStr = localStorage.getItem("itemsArray");
+  let itemsArr = JSON.parse(itemsStr);
+
   for(let i = 0; i < itemsArr.length; i++) {
     const container = document.getElementById("container");
     const item = itemsArr[i];
     const itemQ = itemsArr[i].quantity;
     //console.log(item);
     const itemContainer = document.createElement("div");
-    itemContainer.setAttribute("id", i);
+    itemContainer.setAttribute("id", item.id);
     container.appendChild(itemContainer);
     const itemName = document.createElement("h3");
     itemName.innerHTML = item.name;
@@ -49,7 +47,7 @@ window.onload = function() {
     itemImage.setAttribute("src", item.imageUrl);
     itemContainer.appendChild(itemImage);
     const itemQuantity = document.createElement("p");
-    itemQuantity.setAttribute("id", item.id);
+    itemQuantity.classList.add("quantityEl");
     itemQuantity.innerHTML = "Quantity : " + item.quantity;
     itemContainer.appendChild(itemQuantity);
     const itemPrice = document.createElement("p");
@@ -59,16 +57,21 @@ window.onload = function() {
     buyBtn.innerHTML = "BUY";
     itemContainer.appendChild(buyBtn);
     buyBtn.addEventListener("click", (event) => {
-      const parent = event.target.parentElement;
-      const index = parent.getAttribute("id");
-      const elementForUpdate = items[index];
-      elementForUpdate.quantity -= 1;
-      document.getElementById(elementForUpdate.id).innerHTML = "Quantity : " + elementForUpdate.quantity;
-      localStorage.setItem("itemsArray", JSON.stringify(items)); 
+      const parentEl = event.target.parentElement;
+      let idEl = parentEl.getAttribute("id");
+      console.log(idEl);
+      const index = itemsArr.findIndex(item => item.id == idEl);
+      console.log(index);
+      const elementForUpdate = itemsArr[index];
+      console.log(elementForUpdate);
+      let quantity = elementForUpdate.quantity;
+      elementForUpdate.quantity = quantity - 1;
+      document.querySelector("p.quantityEl").innerHTML = "Quantity : " + elementForUpdate.quantity;
+      localStorage.setItem("itemsArray", JSON.stringify(itemsArr)); 
       if (elementForUpdate.quantity === 0) {
-        container.removeChild(parent);
-        items.splice(index, 1);
-        localStorage.setItem("itemsArray", JSON.stringify(items));
+        container.removeChild(parentEl);
+        itemsArr.splice(index, 1);
+        localStorage.setItem("itemsArray", JSON.stringify(itemsArr));
       }
   })
  }
