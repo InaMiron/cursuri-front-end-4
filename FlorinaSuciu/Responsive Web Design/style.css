@@ -1,0 +1,39 @@
+body {
+      font-family: 'Amaranth', sans-serif;
+      font-size:25px;
+      color:#333;
+    } 
+    
+img {
+   float:left;
+/*    width: 15%;
+   height: 25%; */
+  max-width:20%;
+  height:auto;
+}
+
+.top {
+  margin-left:16%;
+}
+
+.clear {
+  clear:both;
+}
+
+main {
+  display:flex;
+  justify-content:flex-start;
+}
+
+#blogs {
+  color:blue;
+  text-decoration: underline;
+}
+
+#bloglink {
+  margin-top:-2%;
+}
+
+span {
+  font-weight:bold;
+}

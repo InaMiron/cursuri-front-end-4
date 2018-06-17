@@ -18,10 +18,10 @@ window.onload = () => {
       btn.onclick = (e) => {
         //console.log(e);
         if(e.target.defaultValue === "celsius") {
-          document.querySelector("h1").innerHTML = response.current_observation.dewpoint_c + "\°C";
+          document.querySelector("h1").innerHTML = response.current_observation.temp_c + "\°C";
           document.cookie = `degrees=celsius`;
         } else if (e.target.defaultValue === "fahrenheit") {
-          document.querySelector("h1").innerHTML = response.current_observation.dewpoint_f + "\°F";
+          document.querySelector("h1").innerHTML = response.current_observation.temp_f + "\°F";
           document.cookie = `degrees=fahrenheit`;
         }
       }
@@ -30,9 +30,9 @@ window.onload = () => {
     const cookies = getCookies();
     const userDegrees = cookies.degrees;
     if(userDegrees === "celsius") {
-      document.querySelector("h1").innerHTML = response.current_observation.dewpoint_c + "\°C";
+      document.querySelector("h1").innerHTML = response.current_observation.temp_c + "\°C";
     } else if (userDegrees === "fahrenheit") {
-      document.querySelector("h1").innerHTML = response.current_observation.dewpoint_f + "\°F";
+      document.querySelector("h1").innerHTML = response.current_observation.temp_f + "\°F";
     }
   })
 }
