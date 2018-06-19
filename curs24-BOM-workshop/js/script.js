@@ -1,4 +1,4 @@
-let items = [{  id: 1,
+const items = [{  id: 1,
     name: "Telefon mobil HTC U 11, Dual SIM, 64GB, 4G, Brilliant Black",
     imageUrl: "https://s12emagst.akamaized.net/products/6053/6052836/images/res_151cbf9f491dc8b1555e14bfe5a60fbc_150x150_bpqg.jpg",
     quantity: 5,
@@ -46,7 +46,7 @@ window.onload = function() {
     itemImage.setAttribute("src", item.imageUrl);
     itemContainer.appendChild(itemImage);
     const itemQuantity = document.createElement("p");
-    itemQuantity.classList.add("quantityEl");
+    itemQuantity.setAttribute("id", "id" + item.id);
     itemQuantity.innerHTML = "Quantity : " + item.quantity;
     itemContainer.appendChild(itemQuantity);
     const itemPrice = document.createElement("p");
@@ -65,7 +65,7 @@ window.onload = function() {
       //console.log(elementForUpdate);
       let quantity = elementForUpdate.quantity;
       elementForUpdate.quantity = quantity - 1;
-      document.querySelector("p.quantityEl").innerHTML = "Quantity : " + elementForUpdate.quantity;
+      document.getElementById("id" + idEl).innerHTML = "Quantity : " + elementForUpdate.quantity;
       localStorage.setItem("itemsArray", JSON.stringify(itemsArr)); 
       if (elementForUpdate.quantity === 0) {
         container.removeChild(parentEl);
