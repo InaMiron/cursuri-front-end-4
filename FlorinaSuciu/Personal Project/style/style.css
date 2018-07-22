@@ -1,0 +1,185 @@
+body {
+	margin:50px 50px 0 50px;
+	padding:8px 80px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5
+} 
+
+article {
+	margin:150px;
+	font-size: 1.5rem;
+	font-weight: 400;
+    line-height: 1.5;
+    width:60%;
+}
+
+img {
+	width:50%;
+}
+
+h4 {
+	text-align: left;
+}
+
+.navImg {
+	width:20px;
+	height:auto;
+	margin-bottom:8px;
+}
+
+ul.navbar-nav li:nth-child(n+1):nth-child(-n+3):hover {
+	border-bottom: 1px solid black;
+}
+
+#home {
+	margin-bottom: 33%;
+}
+
+section#resume article {
+	margin:10px auto;
+	text-align:center;
+}
+
+.purple {
+	box-shadow: inset 0 -6px 0 rgba(184,107,255,.2);
+}
+
+.yellow {
+	box-shadow: inset 0 -6px 0 rgba(255,221,87,.2);
+}
+
+.pink {
+	box-shadow: inset 0 -6px 0 rgba(255,74,110,.2);
+}
+
+.green {
+	box-shadow: inset 0 -6px 0 rgba(35,209,153,.2);
+}
+
+.blue {
+	box-shadow: inset 0 -6px 0 rgba(36,177,209,.2);
+}
+
+
+.title {
+    text-align: center;
+    border-bottom: 1px solid rgb(153,153,153);
+    width: 20%;
+    margin-left: 40%;
+    margin-bottom: 50px;
+    margin-top:150px;
+}
+
+#objectiveText {
+	font-size:90%;
+	text-align:left;
+}
+
+.cvItem {
+    margin: 5px auto;
+    padding: 50px;
+    border: 1px solid #999999;
+}
+
+
+img[alt="Udemy"] {
+	width:20%;
+}
+
+img[alt="UMF Cluj-Napoca"] {
+	width:35%;
+}
+
+div.cvItem p:last-child {
+	font-size:70%;
+}
+
+#workSection {
+	text-align: center;
+	margin-bottom: 50px;
+    margin-top:150px;
+}
+   
+.workItem {
+	border-bottom: 1px solid #999999;
+	margin: 20px auto;
+}
+
+section#work h2 {
+	margin-left:20%;
+	color:black;
+	width:17%;
+}
+
+.workLink:hover {
+	text-decoration:none; 
+}
+
+section#work h2:last-child{
+	margin-top:5%;
+}
+
+section#work article:last-child {
+	border:none;
+}
+
+footer {
+	padding:3px;
+}
+
+footer a img {
+	width:20%;
+}
+
+footer p {
+	margin-bottom:0;
+}
+
+@media screen and (max-width:992px) {
+	body {
+		padding:0 ;
+		margin:50px;
+		margin-bottom:0;
+	}
+}
+
+@media screen and (max-width:768px) {
+	body{
+		padding:0 ;
+		margin-left:10px ;
+		margin-right:10px;
+		margin-bottom:0;
+	}
+	.navbar {
+		padding-left:150px;
+	}
+	ul.navbar-nav {
+		flex-direction: row;
+	}
+	#navbarNav {
+		flex-direction:row !important;
+		justify-content: flex-end;
+	}
+	.nav-link {
+		margin-right:20px;
+	}
+	ul.navbar-nav li:nth-child(n+4):nth-child(-n+7) {
+		display:none;
+	};
+
+	.workItem {
+		padding:10px 0;
+	}
+
+	article {
+		margin-left:10%;
+	}
+
+	footer p {
+		visibility: hidden ;
+	}
+};
+
+
+}

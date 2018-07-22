@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <title>Personal Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="screen.css" media="screen">
+  <link rel="stylesheet" href="../style/style.css">
+  <script src="../script/script.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-expand-lg pt-md-5 pr-md-5 navbar-light">
+      <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#resume">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#workSection">Work</a>
+          </li>
+          <li class="nav-item nav-link">Contact:</li>
+          <li class="nav-item">
+            <a class="nav-link" href="mailto:fsuciue@gmail.com"><img src="../images/gmail.png" alt="gmail" class="navImg"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/florina-elena-suciu-0a2148146/"><img src="../images/linkedIn.png" alt="linkedIn" class="navImg"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://github.com/InaMiron/cursuri-front-end-4/tree/master/FlorinaSuciu"><img src="../images/github.png" alt="github" class="navImg"></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <article id="home">
+      <h1 class="display-4">Hey, I'm Florina Suciu.</h1>
+      <p class="lead">I love <span class="pink">learning</span> and <span class="green">figuring out</span> how things work.</p>
+      <hr class="my-4">
+      <p>Driven by <span class="yellow">curiosity</span>, I discovered the amazing world of coding.The <span  class="purple">challenges</span>, the <span  class="pink">sense of accomplishment</span> when getting something done and the <span  class="yellow">dedication for knowledge sharing</span> are the main factors that contributed to my decision on becoming a <span class="blue">new Front-end Developer()</span>.</p>
+    </article>
+
+    <section id="resume">
+      <h1 class="title">Resume</h1>
+      <article class="cvArticle">
+        <h4>Career Objective </h4>
+        <div class="cvItem">
+          <p id="objectiveText">I recently finished a Front-end Web Development course and I am pursuing a carrer in this direction where I can make use of my knowledge and enthusiasm. I am looking for an environment where I can further develop my skills and continue to advance in my career. </p>
+        </div>
+      </article>
+      <article class="cvArticle">
+        <h4>Professional Trainings </h4>
+        <div class="cvItem">
+          <a target="_blank" href="https://informalschool.com/"><img src="../images/scoalaInformala.png" alt="The Informal School of IT"></a>
+          <h3>The Informal School of IT</h3>
+          <p>Front End Web Development module</p>
+          <p>feb 2018 – iulie 2018</p>
+        </div>
+        <div class="cvItem">
+          <a target="_blank" href="https://www.udemy.com/"><img src="../images/udemy.png" alt="Udemy"></a>
+          <p>The Complete Web Developer Course 2.0 </p>
+          <p>2017</p>
+        </div>
+        <div class="cvItem">
+          <a target="_blank" href="https://www.codecademy.com/"><img src="../images/codeCademy.png" alt="codeCademy"></a>
+          <p>HTML & CSS course</p>
+          <p>2015</p>
+        </div>
+      </article>
+      <article>
+        <h4>Education</h4>
+        <div class="cvItem">
+          <a target="_blank" href="http://www.umfcluj.ro/"><img src="../images/umf.jpg" alt="UMF Cluj-Napoca"></a>
+          <h3>Medicine and Pharmacy University "Iuliu Hatieganu" Cluj-Napoca</h3>
+          <p>Bachelor's degree in Obstetrical Care, Midwives</p>
+          <p>2004 - 2008</p>
+        </div>
+      </article>  
+    </section>
+      <h1 id="workSection">Work</h1>
+    <section id="work">
+      <a class="workLink" target="_blank" href="https://github.com/InaMiron/cursuri-front-end-4/tree/master/FlorinaSuciu/Games%20World"><h2 class="green">Games World</h2></a>
+      <article class="workItem">
+        <h4>Description: </h4>
+        <div>
+          <p>A web application that uses API calls to generate a game list and also display a detailed game page. Users can perfom various actions such as create, update and delete.</p>
+        </div>
+        <h4>Tech Stack: </h4>
+        <ul>
+          <li>Bootstrap</li>
+          <li>jQuery</li>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>Javascript (OOP, DOM, BOM, AJAX)</li>
+          <li>Github</li>
+        </ul>
+      </article>
+      <a class="workLink" target="_blank" href="https://github.com/codeLevi/fiiireloaded"><h2 class="yellow">My Imdb</h2></a>
+      <article class="workItem">
+        <h4>Description: </h4>
+        <div>
+          <p>A collaborative project that uses API calls to generate a movie list and display detailed movie pages. Users can register, login, logout and perfom various actions such as search movies, create, update and delete depending on their authenticated status.</p>
+        </div>
+        <h4>Tech Stack: </h4>
+        <ul>
+          <li>Asana - for task management</li>
+          <li>Github</li>
+          <li>Bootstrap</li>
+          <li>jQuery</li>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>Javascript (OOP, DOM, BOM, AJAX, local storage, headers, window, screen, location, history, navigation)</li>
+          <li>ECMAScript 6 (arrow functions, classes)</li>
+        </ul>
+      </article>
+      
+    </section>
+  </main>
+  <footer class="d-flex justify-content-around">
+      <p class="pink">Contact me:</p>
+      <a target="_blank" href="https://www.linkedin.com/in/florina-elena-suciu-0a2148146/"><img class="footerImg" src="../images/linkedIn.png" alt="linkedIn"></a>
+      <a target="_blank" href="mailto:fsuciue@gmail.com"><img class="footerImg" src="../images/gmail.png" alt="gmail"></a>
+      <a target="_blank" href="https://www.facebook.com/pomisori.pomisori"><img class="footerImg" src="../images/fb.png" alt="facebook"></a>
+  </footer>
+</body>
+</html>
