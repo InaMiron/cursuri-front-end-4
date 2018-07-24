@@ -1,5 +1,5 @@
 body {
-    margin:50px 50px 0 50px;
+    margin:150px 150px 0 150px;
     padding:8px 80px;
     font-size: 1rem;
     font-weight: 400;
@@ -145,6 +145,10 @@ footer p {
 }
 
 @media screen and (max-width:768px) {
+	p,li{
+		font-size:18px;
+	}
+	
 	body{
 		padding:0 ;
 		margin-left:10px ;
